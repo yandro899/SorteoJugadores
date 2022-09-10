@@ -28,6 +28,20 @@ public class Bombo {
 		System.out.println();
 	}
 	
+	public void mostrarBomboSimple() {
+		if (this.participantes.isEmpty()) 
+		{
+			System.out.println("NO HAY PARTICIPANTES.");
+			return;
+		}
+		
+		System.out.println("Bombo n° " + this.numero);
+		for (int i=0; i<this.participantes.size(); i++) {
+			System.out.println("\t\t" + this.participantes.get(i).getNombre());
+		}
+		System.out.println();
+	}
+	
 	public void agregarParticipante(Jugador jugador) {
 		this.participantes.add(jugador);
 	}
